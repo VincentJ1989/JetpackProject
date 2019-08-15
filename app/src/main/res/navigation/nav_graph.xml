@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/nav_graph"
+        app:startDestination="@+id/navMainFragment">
+
+    <fragment
+            android:id="@+id/navMainFragment"
+            android:name="com.vincentj.jetpackproject.nav.NavMainFragment"
+            android:label="fragment_nav_main"
+            tools:layout="@layout/fragment_nav_main">
+        <action
+                android:id="@+id/action_navMainFragment_to_navHomeFragment"
+                app:destination="@id/navHomeFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right" />
+        <action
+                android:id="@+id/action_navMainFragment_to_navFoundFragment"
+                app:destination="@id/navFoundFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right" />
+        <action
+                android:id="@+id/action_navMainFragment_to_navMineFragment"
+                app:destination="@id/navMineFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+            android:id="@+id/navHomeFragment"
+            android:name="com.vincentj.jetpackproject.nav.NavHomeFragment"
+            android:label="fragment_nav_home"
+            tools:layout="@layout/fragment_nav_home" />
+    <fragment
+            android:id="@+id/navFoundFragment"
+            android:name="com.vincentj.jetpackproject.nav.NavFoundFragment"
+            android:label="fragment_nav_found"
+            tools:layout="@layout/fragment_nav_found">
+        <action
+                android:id="@+id/action_navFoundFragment_to_navFoundDetailFragment"
+                app:destination="@id/navFoundDetailFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+            android:id="@+id/navFoundDetailFragment"
+            android:name="com.vincentj.jetpackproject.nav.NavFoundDetailFragment"
+            android:label="fragment_nav_found_detail"
+            tools:layout="@layout/fragment_nav_found_detail"></fragment>
+    <fragment
+            android:id="@+id/navMineFragment"
+            android:name="com.vincentj.jetpackproject.nav.NavMineFragment"
+            android:label="fragment_nav_mine"
+            tools:layout="@layout/fragment_nav_mine" />
+
+</navigation>
