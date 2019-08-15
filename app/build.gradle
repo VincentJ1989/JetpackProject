@@ -10,7 +10,7 @@ android {
     buildToolsVersion '28.0.3'
     defaultConfig {
         applicationId "com.vincentj.jetpackproject"
-        minSdkVersion 15
+        minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -34,10 +34,21 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.core:core-ktx:1.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    // Glide
+    def glideVersion = '4.9.0'
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
+
     // Navigation
     def nav_dep = "2.2.0-alpha01"
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_dep"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_dep"
+    // LiveData
+    def archLivecycleVersion = '1.1.1'
+    implementation "android.arch.lifecycle:extensions:$archLivecycleVersion"
+    annotationProcessor "android.arch.lifecycle:compiler:$archLivecycleVersion"
+    // circleView
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'
